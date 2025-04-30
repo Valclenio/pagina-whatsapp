@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fale Conosco</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background: #f0f0f0;
+    }
+    h1 {
+      color: #075e54;
+    }
+    .botao {
+      display: block;
+      margin: 20px auto;
+      padding: 15px 25px;
+      font-size: 18px;
+      background-color: #25D366;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      width: 80%;
+      max-width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Escolha sua loja para falar no WhatsApp</h1>
+
+  <a class="botao" href="https://wa.me/5584991618438">Queiroz Atacadao São Gonçalo</a>
+  <a class="botao" href="https://wa.me/5584991618438">Queiroz Atacadao Assu</a>
+  <a class="botao" href="https://wa.me/5584991618438">Queiroz Atacadao Mossoro</a>
+  <a class="botao" href="https://wa.me/5584991618438">Queiroz Atacadao Patos</a>
+
+</body>
+</html>

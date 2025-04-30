@@ -1,42 +1,73 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fale Conosco</title>
+  <title>Atendimento</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 50px;
-      background: #f0f0f0;
+      padding: 30px;
+      background-color: #f5f5f5;
     }
+
     h1 {
-      color: #075e54;
+      color: #333;
     }
-    .botao {
-      display: block;
-      margin: 20px auto;
+
+    .btn {
+      display: inline-block;
+      margin: 15px;
       padding: 15px 25px;
       font-size: 18px;
-      background-color: #25D366;
-      color: white;
-      border: none;
-      border-radius: 8px;
+      color: #fff;
+      background-color: #007bff;
       text-decoration: none;
-      width: 80%;
-      max-width: 300px;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .hidden {
+      display: none;
     }
   </style>
 </head>
 <body>
-  <h1>Escolha sua loja para falar no WhatsApp</h1>
+  <h1>Escolha uma opção:</h1>
 
-  <a class="botao" href="https://wa.me/5584991618438">Queiroz Atacadao São Gonçalo</a>
-  <a class="botao" href="https://wa.me/5584991618438">Queiroz Atacadao Assu</a>
-  <a class="botao" href="https://wa.me/5584991618438">Queiroz Atacadao Mossoro</a>
-  <a class="botao" href="https://wa.me/5584991618438">Queiroz Atacadao Patos</a>
+  <!-- Botões principais -->
+  <a href="#" class="btn" onclick="mostrarWhatsapp()">WhatsApp</a>
+  <a href="#" class="btn" onclick="mostrarEncartes()">Encartes</a>
 
+  <!-- Seção WhatsApp -->
+  <div id="whatsapp-section" class="hidden">
+    <h2>Escolha sua loja:</h2>
+    <a href="https://wa.me/5584991618438" class="btn">Queiroz Atacadao Mossoro</a>
+    <a href="https://wa.me/5584999999999" class="btn">Queiroz Atacadao Assu</a>
+    <a href="https://wa.me/5584998888888" class="btn">Queiroz Atacadao São Gonçalo</a>
+  </div>
+
+  <!-- Seção Encartes -->
+  <div id="encartes-section" class="hidden">
+    <h2>Visualizar ou baixar encarte:</h2>
+    <a href="encarte.pdf" class="btn" target="_blank">Visualizar Encarte</a>
+    <a href="encarte.pdf" class="btn" download>Baixar Encarte</a>
+  </div>
+
+  <script>
+    function mostrarWhatsapp() {
+      document.getElementById('whatsapp-section').classList.remove('hidden');
+      document.getElementById('encartes-section').classList.add('hidden');
+    }
+
+    function mostrarEncartes() {
+      document.getElementById('encartes-section').classList.remove('hidden');
+      document.getElementById('whatsapp-section').classList.add('hidden');
+    }
+  </script>
 </body>
 </html>
