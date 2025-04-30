@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Atendimento</title>
+  <meta charset="UTF-8"> <!-- Define o padrão de caracteres como UTF-8 -->
+  <title>Atendimento</title> <!-- Título da aba do navegador -->
+
+  <!-- Estilos CSS -->
   <style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
+      font-family: Arial, sans-serif; /* Fonte da página */
+      text-align: center; /* Centraliza todo o conteúdo */
       padding: 30px;
-      background-color: #f5f5f5;
+      background-color: #f5f5f5; /* Cor de fundo */
     }
 
     h1, h2, h3 {
-      color: #333;
+      color: #333; /* Cor dos títulos */
     }
 
     .btn {
@@ -20,62 +22,72 @@
       margin: 10px;
       padding: 15px 25px;
       font-size: 18px;
-      color: #fff;
-      background-color: #007bff;
+      color: #fff; /* Cor da fonte */
+      background-color: #007bff; /* Cor de fundo dos botões */
       text-decoration: none;
       border-radius: 8px;
       transition: background-color 0.3s;
     }
 
     .btn:hover {
-      background-color: #0056b3;
+      background-color: #0056b3; /* Cor ao passar o mouse */
     }
 
     .hidden {
-      display: none;
+      display: none; /* Oculta elementos quando essa classe é aplicada */
     }
 
     .section {
-      margin-top: 30px;
+      margin-top: 30px; /* Espaçamento entre seções */
     }
   </style>
 </head>
+
 <body>
+  <!-- Título principal da página -->
   <h1>Escolha uma opção:</h1>
 
-  <!-- Botões principais -->
+  <!-- Botões para escolher entre WhatsApp ou Encartes -->
   <a href="#" class="btn" onclick="mostrarWhatsapp()">WhatsApp</a>
   <a href="#" class="btn" onclick="mostrarEncartes()">Encartes</a>
 
-  <!-- Seção WhatsApp -->
+  <!-- Seção de atendimento por WhatsApp (inicialmente escondida) -->
   <div id="whatsapp-section" class="section hidden">
     <h2>Atendimento por WhatsApp</h2>
-    <a href="https://wa.me/5584991618438" class="btn">Queiroz Atacadao Mossoró</a>
-    <a href="https://wa.me/5584999999999" class="btn">Queiroz Atacadao Assu</a>
-    <a href="https://wa.me/5584998888888" class="btn">Queiroz Atacadão São Gonçalo</a>
+    <!-- Links diretos para WhatsApp das lojas -->
+    <a href="https://wa.me/5584991618438" class="btn">Loja Mossoró</a>
+    <a href="https://wa.me/5584999999999" class="btn">Loja Natal</a>
+    <a href="https://wa.me/5584998888888" class="btn">Loja Fortaleza</a>
   </div>
 
-  <!-- Seção Encartes -->
+  <!-- Seção de encartes (inicialmente escondida) -->
   <div id="encartes-section" class="section hidden">
     <h2>Encarte de Ofertas</h2>
     <h3>Escolha a loja:</h3>
-    <a href="encartes/mossoro.pdf" class="btn" target="_blank">Queiroz Atacadao Mossoró</a>
-    <a href="encartes/mossoro.pdf" class="btn" download>Queiroz Atacadao Mossoró - Baixar</a><br>
+
+    <!-- Botões para visualizar e baixar o encarte da loja Mossoró -->
+    <a href="encartes/mossoro.pdf" class="btn" target="_blank">Queiroz Atacadao Mossoro- Visualizar</a>
+    <a href="encartes/mossoro.pdf" class="btn" download>Queiroz Atacadao Mossoro - Baixar</a><br>
     
-    <a href="encartes/natal.pdf" class="btn" target="_blank">Queiroz Atacadao Assu</a>
+    <!-- Botões para Natal -->
+    <a href="encartes/natal.pdf" class="btn" target="_blank">Queiroz Atacadao Assu- Visualizar</a>
     <a href="encartes/natal.pdf" class="btn" download>Queiroz Atacadao Assu- Baixar</a><br>
 
-    <a href="encartes/fortaleza.pdf" class="btn" target="_blank">Queiroz Atacadão São Gonçalo- Visualizar</a>
-    <a href="encartes/fortaleza.pdf" class="btn" download>Queiroz Atacadão São Gonçalo- Baixar</a>
+    <!-- Botões para Fortaleza -->
+    <a href="encartes/fortaleza.pdf" class="btn" target="_blank">Queiroz Atacadao Patos- Visualizar</a>
+    <a href="encartes/fortaleza.pdf" class="btn" download>Queiroz Atacadao Patos - Baixar</a>
   </div>
 
+  <!-- Script JavaScript para alternar entre seções -->
   <script>
     function mostrarWhatsapp() {
+      // Exibe a seção WhatsApp e esconde a de Encartes
       document.getElementById('whatsapp-section').classList.remove('hidden');
       document.getElementById('encartes-section').classList.add('hidden');
     }
 
     function mostrarEncartes() {
+      // Exibe a seção Encartes e esconde a de WhatsApp
       document.getElementById('encartes-section').classList.remove('hidden');
       document.getElementById('whatsapp-section').classList.add('hidden');
     }
